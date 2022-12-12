@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "UpdateLock": {
+      "fileName": "dotnet",
+      "workingDirectory": ".",
+      "arguments": "restore --force-evaluate"
+    },
+    "ClearLocalNugetCaches": {
+      "fileName": "dotnet",
+      "workingDirectory": ".",
+      "arguments": "nuget locals all --clear"
+    }
+  }
+}

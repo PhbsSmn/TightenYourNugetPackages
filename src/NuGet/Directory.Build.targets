@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Project>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+		<WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591;CS8618;CS8619</WarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+		<WarningsAsErrors>$(WarningsAsErrors);NU1605;CS1591;CS8618;CS8619</WarningsAsErrors>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Update="$(AssemblyName).xml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

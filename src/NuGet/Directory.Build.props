@@ -1,0 +1,33 @@
+<Project>
+	<Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../../'))" />
+	<PropertyGroup>
+		<Company>ZF</Company>
+		<Authors>Pieter Samyn</Authors>
+		<Copyright>©ZF. All rights reserved.</Copyright>
+
+		<!-- This should be done in a CI/CD pipeline -->
+		<RepositoryUrl>https://github.com/PhbsSmn/TightenYourNugetPackages.git</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/PhbsSmn/TightenYourNugetPackages.git</PackageProjectUrl>
+		<RepositoryType>Github</RepositoryType>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<DebugType>embedded</DebugType>
+
+		<!-- When run on a CI/CD pipeline don't add this, it will be done for you -->
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.*" PrivateAssets="All"/>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<Target Name="CopyPackage" AfterTargets="Pack">
+		<Exec Command="xcopy &quot;$(MSBuildProjectDirectory)\$(OutputPath)..\$(PackageId).$(PackageVersion).*nupkg&quot; &quot;$(MSBuildStartupDirectory)\NugetPackages\PrivatePackageSource&quot; /Y" />
+	</Target>
+</Project>

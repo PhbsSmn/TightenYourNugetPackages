@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DigitalDiary.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:DigitalDiary.IDigitalDiaryRepository">
+            <summary>
+            The digital diary repository interface
+            </summary>
+        </member>
+        <member name="P:DigitalDiary.IDigitalDiaryRepository.RepositoryProjectName">
+            <summary>
+            The memory repository project name
+            </summary>
+        </member>
+        <member name="M:DigitalDiary.IDigitalDiaryRepository.Write(System.String)">
+            <summary>
+            Writes a message to the digital diary
+            </summary>
+            <param name="message">The message</param>
+        </member>
+        <member name="M:DigitalDiary.IDigitalDiaryRepository.Read">
+            <summary>
+            Reads all the message from the digital diary repo
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/></returns>
+        </member>
+        <member name="T:DigitalDiary.Models.Message">
+            <summary>
+            The message written in the digital diary
+            </summary>
+            <param name="Id">The id</param>
+            <param name="Value">The message</param>
+            <param name="Timestamp">The time when the message was written</param>
+        </member>
+        <member name="M:DigitalDiary.Models.Message.#ctor(System.Int32,System.String,System.DateTime)">
+            <summary>
+            The message written in the digital diary
+            </summary>
+            <param name="Id">The id</param>
+            <param name="Value">The message</param>
+            <param name="Timestamp">The time when the message was written</param>
+        </member>
+        <member name="P:DigitalDiary.Models.Message.Id">
+            <summary>The id</summary>
+        </member>
+        <member name="P:DigitalDiary.Models.Message.Value">
+            <summary>The message</summary>
+        </member>
+        <member name="P:DigitalDiary.Models.Message.Timestamp">
+            <summary>The time when the message was written</summary>
+        </member>
+    </members>
+</doc>

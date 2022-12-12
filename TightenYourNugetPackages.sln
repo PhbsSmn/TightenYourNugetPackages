@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution items", ".solution items", "{B743F52F-CB8B-4157-80B7-48170CE6EBCB}"
+	ProjectSection(SolutionItems) = preProject
+		commands.json = commands.json
+		Directory.Build.props = Directory.Build.props
+		LICENSE.txt = LICENSE.txt
+		nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5D7F11DD-2701-4DC3-8909-6C935B6A920C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{3860A3D7-0DD7-4931-9B15-575E83672417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{3ECC1D4E-57C9-4B4D-BFAA-6F0F5991C3D1}"
+	ProjectSection(SolutionItems) = preProject
+		src\NuGet\Directory.Build.props = src\NuGet\Directory.Build.props
+		src\NuGet\Directory.Build.targets = src\NuGet\Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalDiary.Abstractions", "src\NuGet\DigitalDiary.Abstractions\DigitalDiary.Abstractions.csproj", "{42AF3FC1-BE11-41D3-8D86-0795815C3307}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDigitalDiary.WebApi", "src\WebApi\MyDigitalDiary.WebApi\MyDigitalDiary.WebApi.csproj", "{2998067C-A5DE-44B2-9F16-41BD07618CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalDiary.MemoryRepository", "src\NuGet\DigitalDiary.MemoryRepository\DigitalDiary.MemoryRepository.csproj", "{EF9C63E9-ED8C-4EF1-A117-9F937D24015A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Private", "Private", "{90480ACA-A22A-474C-B8D2-DBF92AFAC346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42AF3FC1-BE11-41D3-8D86-0795815C3307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AF3FC1-BE11-41D3-8D86-0795815C3307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AF3FC1-BE11-41D3-8D86-0795815C3307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AF3FC1-BE11-41D3-8D86-0795815C3307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2998067C-A5DE-44B2-9F16-41BD07618CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2998067C-A5DE-44B2-9F16-41BD07618CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2998067C-A5DE-44B2-9F16-41BD07618CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2998067C-A5DE-44B2-9F16-41BD07618CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9C63E9-ED8C-4EF1-A117-9F937D24015A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9C63E9-ED8C-4EF1-A117-9F937D24015A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9C63E9-ED8C-4EF1-A117-9F937D24015A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9C63E9-ED8C-4EF1-A117-9F937D24015A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3860A3D7-0DD7-4931-9B15-575E83672417} = {5D7F11DD-2701-4DC3-8909-6C935B6A920C}
+		{3ECC1D4E-57C9-4B4D-BFAA-6F0F5991C3D1} = {5D7F11DD-2701-4DC3-8909-6C935B6A920C}
+		{42AF3FC1-BE11-41D3-8D86-0795815C3307} = {90480ACA-A22A-474C-B8D2-DBF92AFAC346}
+		{2998067C-A5DE-44B2-9F16-41BD07618CAB} = {3860A3D7-0DD7-4931-9B15-575E83672417}
+		{EF9C63E9-ED8C-4EF1-A117-9F937D24015A} = {90480ACA-A22A-474C-B8D2-DBF92AFAC346}
+		{90480ACA-A22A-474C-B8D2-DBF92AFAC346} = {3ECC1D4E-57C9-4B4D-BFAA-6F0F5991C3D1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {667EE586-E185-427A-8B52-488D09F3991F}
+	EndGlobalSection
+EndGlobal
