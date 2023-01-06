@@ -1,9 +1,14 @@
 {
   "commands": {
-    "UpdateLock": {
-      "fileName": "dotnet",
+    "CreatePrivatePackageSource": {
+      "fileName": "cmd",
       "workingDirectory": ".",
-      "arguments": "restore --force-evaluate"
+      "arguments": "/c If not exist \"./NugetPackages/PrivatePackageSource\" (mkdir \"./NugetPackages/PrivatePackageSource\")"
+    },
+    "CreatePublicPackageSource": {
+      "fileName": "cmd",
+      "workingDirectory": ".",
+      "arguments": "/c If not exist \"./NugetPackages/PublicPackageSource\" (mkdir \"./NugetPackages/PublicPackageSource\")"
     },
     "ClearLocalNugetCaches": {
       "fileName": "dotnet",
@@ -11,4 +16,5 @@
       "arguments": "nuget locals all --clear"
     }
   }
+, "-vs-binding":{"ProjectOpened":["ClearLocalNugetCaches","CreatePrivatePackageSource","CreatePublicPackageSource"]}
 }

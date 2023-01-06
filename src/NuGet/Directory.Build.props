@@ -17,7 +17,7 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<DebugType>embedded</DebugType>
 
-		<!-- When run on a CI/CD pipeline don't add this, it will be done for you -->
+		<!-- When run on a CI/CD pipeline don't add this, it should be done for you -->
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 	<ItemGroup>
@@ -28,6 +28,6 @@
 		</PackageReference>
 	</ItemGroup>
 	<Target Name="CopyPackage" AfterTargets="Pack">
-		<Exec Command="xcopy &quot;$(MSBuildProjectDirectory)\$(OutputPath)..\$(PackageId).$(PackageVersion).*nupkg&quot; &quot;$(MSBuildStartupDirectory)\NugetPackages\PrivatePackageSource&quot; /Y" />
+		<Exec Command="xcopy &quot;$(MSBuildProjectDirectory)\$(OutputPath)..\$(PackageId).$(PackageVersion).*nupkg&quot; &quot;$(MSBuildStartupDirectory)\NugetPackages\PrivatePackageSource&quot; /Y"></Exec>
 	</Target>
 </Project>
