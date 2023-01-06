@@ -1,9 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <RootNamespace>DigitalDiary</RootNamespace>
 	  <DebugType>full</DebugType>
 	  <version>1.0.0</version>
   </PropertyGroup>
-
 </Project>
