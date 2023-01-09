@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <AssemblyName>DigitalDiary.MemoryRepository</AssemblyName>
+	  <RootNamespace>DigitalDiary.MemoryRepository</RootNamespace>
+	  <version>1.0.5</version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalDiary.Abstractions\DigitalDiary.Abstractions.csproj" />
+  </ItemGroup>
+
+	<Target Name="CopyPackage" AfterTargets="Pack">
+		<Exec Command="xcopy &quot;$(MSBuildProjectDirectory)\$(OutputPath)..\$(PackageId).$(PackageVersion).*nupkg&quot; &quot;$(MSBuildStartupDirectory)\NugetPackages\PublicPackageSource&quot; /Y"></Exec>
+	</Target>
+</Project>
