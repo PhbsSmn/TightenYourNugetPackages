@@ -14,7 +14,17 @@
       "fileName": "dotnet",
       "workingDirectory": ".",
       "arguments": "nuget locals all --clear"
+    },
+    "UpdateLock": {
+      "fileName": "dotnet",
+      "workingDirectory": ".",
+      "arguments": "restore --force-evaluate"
+    },
+    "GitAcceptAllPackageLocks": {
+      "fileName": "git",
+      "workingDirectory": ".",
+      "arguments": "add */packages.lock.json"
     }
-  }
-, "-vs-binding":{"ProjectOpened":["ClearLocalNugetCaches","CreatePrivatePackageSource","CreatePublicPackageSource"]}
+  },
+  "-vs-binding": { "ProjectOpened": [ "ClearLocalNugetCaches", "CreatePrivatePackageSource", "CreatePublicPackageSource", "UpdateLock" ] }
 }

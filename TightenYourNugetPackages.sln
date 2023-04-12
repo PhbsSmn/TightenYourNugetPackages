@@ -36,11 +36,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{3CB3A227-5
 		docs\02-LICENSING.md = docs\02-LICENSING.md
 		docs\03-REPRODUCIBLE-BUILDS.md = docs\03-REPRODUCIBLE-BUILDS.md
 		docs\04-DEPENDENCY-RESOLUTION.md = docs\04-DEPENDENCY-RESOLUTION.md
+		docs\05-DEPENDENCY-CHAIN-ATTACK.md = docs\05-DEPENDENCY-CHAIN-ATTACK.md
+		docs\06-PACKAGE-SIGNING.md = docs\06-PACKAGE-SIGNING.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Public", "Public", "{36ACAFB1-FB87-4364-8F84-D9811F8B3545}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalDiary.MemoryRepositoryInjected", "src\NuGet\DigitalDiary.MemoryRepositoryInjected\DigitalDiary.MemoryRepositoryInjected.csproj", "{C53B8EE7-EE5A-4738-B39F-4BAB50ACE13D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitalDiary.MemoryRepositoryInjected", "src\NuGet\DigitalDiary.MemoryRepositoryInjected\DigitalDiary.MemoryRepositoryInjected.csproj", "{C53B8EE7-EE5A-4738-B39F-4BAB50ACE13D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
