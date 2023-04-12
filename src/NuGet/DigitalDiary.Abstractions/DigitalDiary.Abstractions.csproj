@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	  <RootNamespace>DigitalDiary</RootNamespace>
-	  <version>1.0.0</version>
+	  <version>1.0.2</version>
   </PropertyGroup>
 </Project>

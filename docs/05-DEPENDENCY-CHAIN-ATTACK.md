@@ -19,8 +19,8 @@ You can easy verify if a package has a reserved prefix or not by looking it up v
 
 Using packages which are having a registered prefix makes those packages already safer if you trust the owner. Keep in mind that those packages in turn can also have dependencies that could also be a potential target for an attacker. So it is not because there's a registered prefix it is safe by definition.
 
-When a package is being restored NuGet will request the package from all its repositories.
-When multiple repositories have packages these are then being merged to 1 flat file list. This results that you don't know from which source the package is coming from.
+When a package is being restored NuGet will request the package from all its repositories. Then the retrieved ones are merged to 1 flat file list.
+This results that you don't know from which source the package is coming from.
 So in my case I thought I was resolving my package from my private repository but in fact I was retrieving it from the public one. To resolve this we should use package source mapping. This way NuGet is instructed to resolve package from a certain repository. The most restrictive one will win.
 
 	<?xml version="1.0" encoding="utf-8"?>
@@ -48,3 +48,10 @@ By introducing this source mapping we instruct NuGet to only retrieve package wi
 Only pay attention that we now need to clear our local cache first otherwise it will still successfully resolve the 1.0.5 version.
 
 And restart the solution, if the force restore is now requested it will resolve the one from our private repo ignoring the one from the public repo.
+
+## What if I detect that I was using a faulty package in my application?
+Make sure the erase all local caches where this solution has been build in the company. Most likely you have been breached, I don't speak from experience now but with my investigation I would suggest the following steps:
+1. Raise awareness to the people in charge so that they can inform the stakeholders.
+2. Clean your local cache and from all the devices where it was build.
+3. Make a hotfix for all your environments where the appliaction is running for most of us this is a push your CI/CD server, also here if it was using a shared cache make sure to clean it.
+4. Try to know more about the package that was corrupted maybe you find clues what was targeted. If this package came from a public source inform this source about report this package as well.
