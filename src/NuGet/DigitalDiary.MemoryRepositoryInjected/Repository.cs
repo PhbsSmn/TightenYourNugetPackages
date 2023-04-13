@@ -28,7 +28,7 @@ public class Repository : IDigitalDiaryRepository
     /// <param name="message"></param>
     public void Write(string message)
     {
-        _messages.Add(DateTime.UtcNow, $"This private message: '{message}', has now been broadcasted to everyone");
+        _messages.Add(DateTime.UtcNow, message);
     }
 
     /// <summary>

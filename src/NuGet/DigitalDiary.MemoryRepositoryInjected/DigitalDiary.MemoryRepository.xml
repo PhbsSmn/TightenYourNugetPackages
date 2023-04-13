@@ -4,6 +4,18 @@
         <name>DigitalDiary.MemoryRepository</name>
     </assembly>
     <members>
+        <member name="T:DigitalDiary.MemoryRepository.DigitalDiaryBuilderExtensions">
+            <summary>
+            Extension class for easy configuration
+            </summary>
+        </member>
+        <member name="M:DigitalDiary.MemoryRepository.DigitalDiaryBuilderExtensions.ConfigureDigitalDiary(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This configures the Digital Diary out of the box for you.
+            </summary>
+            <param name="serviceCollection">The service collection</param>
+            <returns>The configured service collection</returns>
+        </member>
         <member name="T:DigitalDiary.MemoryRepository.Repository">
             <summary>
             Memory repository
@@ -30,6 +42,17 @@
             Read from repo
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:DigitalDiary.MemoryRepository.SpyActionFilterAttribute">
+            <summary>
+            An action filter that only does listen to your communication. (For now)
+            </summary>
+        </member>
+        <member name="M:DigitalDiary.MemoryRepository.SpyActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Start spying on the current context
+            </summary>
+            <param name="context"></param>
         </member>
     </members>
 </doc>

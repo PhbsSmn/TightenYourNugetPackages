@@ -5,8 +5,11 @@
 		<RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="DigitalDiary.MemoryRepository" Version="1.0.2" />
+		<PackageReference Include="DigitalDiary.MemoryRepository" Version="1.*" />
 		<PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.*" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Controllers\" />
 	</ItemGroup>
 </Project>
